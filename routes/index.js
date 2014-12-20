@@ -11,10 +11,7 @@
 	// already setup to use the views folder...
 	exports.index = function index (req, res) {
 		// res.send('Index');
-		// Cookies...
-		res.cookie('IndexCookie', 'This was set from Index');
-		// res.clearCookie('IndexCookie');
-		res.render('index', {title: 'Index', cookie: JSON.stringify(req.cookies), session: JSON.stringify(req.session), signedCookie: JSON.stringify(req.signedCookies)});
+		res.render('index', {title: 'Index'});
 	};
 
 	exports.login = function login (req, res) {

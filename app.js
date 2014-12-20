@@ -5,7 +5,6 @@
 	// the order counts here...
 
 	var express = require('express');
-	var app = express();
 	var routes = require('./routes');
 	var errorHandlers = require('./middleware/errorhandlers');
 	var log = require('./middleware/log');
@@ -16,6 +15,8 @@
 	var session = require('express-session');
 	// connect-redis 'extends' the session...
 	var RedisStore = require('connect-redis')(session);
+
+	var app = express();
 
 	// ...
 	app.set('view options', {defaultLayout: 'layout'});
@@ -37,26 +38,20 @@
         return text;
 	};
 
+	var secret = cookieSecret();
+
+	// ...
+	
+	app.use(cookieParser(secret));
+
 	app.use(session({
-		secret: cookieSecret(),
+		secret: secret,
 		saveUninitialized: true,
 		resave: true,
 		store: new RedisStore({
 			url: 'redis://localhost'
-		}) // ...
-	}));	
-
-	app.use(cookieParser('secret'));
-	
-	// ???
-	// app.use(function(req, res, next) {
-	// 	if (req.session.pageCount) {
-	// 		req.session.pageCount += 1;
-	// 	} else {
-	// 		req.session.pageCount = 1;
-	// 		next();
-	// 	}
-	// });
+		})
+	}));
 
 	app.get('/', routes.index);
 	app.get('/login', routes.login);
@@ -69,6 +64,15 @@
 	app.get('/error', function (req, res, next) {
 		next(new Error('It\'s contrived...'));
 	});
+
+	/*app.use(function(req, res, next) {
+		if (req.session.pageCount) {
+			req.session.pageCount += 1;
+		} else {
+			req.session.pageCount = 1;
+			next();
+		}
+	});*/
 
 	app.use(errorHandlers.error);
 	app.use(errorHandlers.notFound);
