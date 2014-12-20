@@ -11,12 +11,15 @@
 	// already setup to use the views folder...
 	exports.index = function index (req, res) {
 		// res.send('Index');
-		res.render('index', {layout: 'layout', title: 'Index'});
+		// Cookies...
+		res.cookie('IndexCookie', 'This was set from Index');
+		// res.clearCookie('IndexCookie');
+		res.render('index', {title: 'Index', cookie: JSON.stringify(req.cookies), session: JSON.stringify(req.session), signedCookie: JSON.stringify(req.signedCookies)});
 	};
 
 	exports.login = function login (req, res) {
 		// res.send('Login');
-		res.render('login', {layout: 'layout', title: 'Login'});
+		res.render('login', {title: 'Login'});
 	};
 
 	// ...
@@ -26,7 +29,7 @@
 
 	exports.chat = function chat (req, res) {
 		// res.send('Chat');
-		res.render('chat', {layout: 'layout', title: 'Chat'});
+		res.render('chat', {title: 'Chat'});
 	};
 
 }());

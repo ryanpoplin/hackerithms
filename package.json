@@ -8,12 +8,14 @@
     "start": "node ./app.js"
   },
   "dependencies": {
-    "ejs": "0.8.5",
-    "express": "4.6.1",
-    "express-partials": "0.2.0",
-    "redis": "0.10.1",
-    "connect-redis": "1.4.7",
-    "connect-flash": "0.1.1"
+    "connect-flash": "latest",
+    "connect-redis": "latest",
+    "cookie-parser": "latest",
+    "ejs": "latest",
+    "express": "latest",
+    "express-partials": "latest",
+    "express-session": "latest",
+    "redis": "latest"
   },
   "repository": {
     "type": "git",
