@@ -2,6 +2,8 @@
 
 	"use strict";
 
+	var util = require('../middleware/utils');
+
 	exports.index = function index (req, res) {
 		res.render('index', {title: 'Index'});
 	};
@@ -11,8 +13,12 @@
 	};
 
 	exports.loginProcess = function loginProcess (req, res) {
-		console.log(req.body);
-		res.send(req.body.username + ' ' + req.body.password);
+		var isAuth = util.auth(req.body.username, req.body.password, req.session);
+		if (isAuth) {
+			res.redirect('/chat');
+		} else {
+			res.redirect('/login');
+		}
 	};
 
 	exports.chat = function chat (req, res) {

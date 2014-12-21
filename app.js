@@ -54,8 +54,10 @@
 	}));
 
 	app.use(csrf());
-	
+
 	app.use(util.csrf);
+
+	app.use(util.authenticated);
 
 	app.get('/', routes.index);
 	
@@ -63,7 +65,7 @@
 
 	app.post('/login', routes.loginProcess);
 
-	app.get('/chat', routes.chat);
+	app.get('/chat', [util.requireAuthentication], routes.chat);
 	
 	app.get('/error', function (req, res, next) {
 		next(new Error('It\'s contrived...'));
