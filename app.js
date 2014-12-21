@@ -10,6 +10,9 @@
 	var cookieParser = require('cookie-parser');
 	var session = require('express-session');
 	var RedisStore = require('connect-redis')(session);
+	var bodyParser = require('body-parser');
+	var csrf = require('csurf');
+	var util = require('./middleware/utils');
 
 	var app = express();
 
@@ -43,20 +46,35 @@
 		})
 	}));
 
+	app.use(bodyParser.json());
+	
+	app.use(bodyParser.urlencoded({
+		// ...
+		extended: false
+	}));
+
+	app.use(csrf());
+	
+	app.use(util.csrf);
+
 	app.get('/', routes.index);
+	
 	app.get('/login', routes.login);
 
 	app.post('/login', routes.loginProcess);
 
 	app.get('/chat', routes.chat);
+	
 	app.get('/error', function (req, res, next) {
 		next(new Error('It\'s contrived...'));
 	});
 
 	app.use(errorHandlers.error);
+	
 	app.use(errorHandlers.notFound);
 
 	app.listen(3000);
+	
 	console.log("App server running on port 3000...");
 
 }());

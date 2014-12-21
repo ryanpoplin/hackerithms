@@ -19,12 +19,14 @@
 						<label for="password">
 							Password			
 						</label>
-						<input type="text" class="form-control" name="password" id="password" placeholder="password">
+						<input type="password" class="form-control" name="password" id="password" placeholder="password">
 					</div>
 			
 					<button class="btn btn-primary btn-block">Login</button>
 			
 				</form>
+
+				<input type="hidden" name="_csrf" value="<%= token %>">
 			
 			</div>
 			

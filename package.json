@@ -15,7 +15,9 @@
     "express": "latest",
     "express-partials": "latest",
     "express-session": "latest",
-    "redis": "latest"
+    "redis": "latest",
+    "body-parser": "latest",
+    "csurf": "latest"
   },
   "repository": {
     "type": "git",
