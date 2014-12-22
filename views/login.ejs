@@ -22,11 +22,11 @@
 						<input type="password" class="form-control" name="password" id="password" placeholder="password">
 					</div>
 			
+					<input type="hidden" name="_csrf" value="<%= token %>">
+					
 					<button class="btn btn-primary btn-block">Login</button>
 			
 				</form>
-
-				<input type="hidden" name="_csrf" value="<%= token %>">
 			
 			</div>
 			

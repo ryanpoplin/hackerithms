@@ -7,7 +7,6 @@
 		next();
 	};
 
-	// sample to be replaced legit...
 	module.exports.authenticated = function authenticated (req, res, next) {
 		res.locals.isAuthenticated = req.session.isAuthenticated;
 		if (req.session.isAuthenticated) {
@@ -25,13 +24,13 @@
 	};
 
 	module.exports.auth = function auth (username, password, session) {
-		var isAuth = true; // username === 'Ryan Poplin';
-		/*if (isAuth) {
+		var isAuth = username === 'Ryan Poplin';
+		if (isAuth) {
 			session.isAuthenticated = isAuth;
 			session.user = {
 				username: username
 			};
-		}*/
+		}
 		return isAuth;
 	};
 

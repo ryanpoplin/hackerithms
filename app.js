@@ -2,17 +2,18 @@
 
 	"use strict";
 
-	var express = require('express');
-	var routes = require('./routes');
+	var util = require('./middleware/utils');
 	var errorHandlers = require('./middleware/errorhandlers');
 	var log = require('./middleware/log');
+	
+	var express = require('express');
+	var routes = require('./routes');
 	var partials = require('express-partials');
 	var cookieParser = require('cookie-parser');
 	var session = require('express-session');
 	var RedisStore = require('connect-redis')(session);
 	var bodyParser = require('body-parser');
 	var csrf = require('csurf');
-	var util = require('./middleware/utils');
 
 	var app = express();
 
@@ -49,7 +50,6 @@
 	app.use(bodyParser.json());
 	
 	app.use(bodyParser.urlencoded({
-		// ...
 		extended: false
 	}));
 
