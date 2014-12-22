@@ -71,6 +71,8 @@
 		next(new Error('It\'s contrived...'));
 	});
 
+	app.get('/logout', routes.logOut);
+
 	app.use(errorHandlers.error);
 	
 	app.use(errorHandlers.notFound);

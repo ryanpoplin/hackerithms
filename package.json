@@ -12,7 +12,7 @@
     "connect-redis": "latest",
     "cookie-parser": "latest",
     "ejs": "latest",
-    "express": "4.6.1",
+    "express": "latest",
     "express-partials": "latest",
     "express-session": "latest",
     "redis": "latest",

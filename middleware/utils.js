@@ -34,4 +34,9 @@
 		return isAuth;
 	};
 
+	module.exports.logOut = function logOut (session) {
+		session.isAuthenticated = false;
+		delete session.user;
+	};
+
 }());

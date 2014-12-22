@@ -25,4 +25,9 @@
 		res.render('chat', {title: 'Chat'});
 	};
 
+	exports.logOut = function logOut (req, res) {
+		util.logOut(req.session);
+		res.redirect('/');
+	};
+
 }());
