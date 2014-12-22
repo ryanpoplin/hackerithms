@@ -9,7 +9,7 @@
 	};
 
 	exports.login = function login (req, res) {
-		res.render('login', {title: 'Login'});
+		res.render('login', {title: 'Login', message: req.flash('error')});
 	};
 
 	exports.loginProcess = function loginProcess (req, res) {
@@ -17,6 +17,7 @@
 		if (isAuth) {
 			res.redirect('/chat');
 		} else {
+			req.flash('error', 'Wrong Username or Password. Please try again...');
 			res.redirect('/login');
 		}
 	};
