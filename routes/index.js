@@ -3,6 +3,7 @@
 	"use strict";
 
 	var util = require('../middleware/utils');
+	var config = require('../config');
 
 	exports.index = function index (req, res) {
 		res.render('index', {title: 'Index'});
@@ -18,7 +19,7 @@
 			res.redirect('/chat');
 		} else {
 			req.flash('error', 'Wrong Username or Password. Please try again...');
-			res.redirect('/login');
+			res.redirect(config.routes.login);
 		}
 	};
 

@@ -2,6 +2,13 @@
 
 	"use strict";
 
+	var config = require('../config');
+
+	module.exports.templateRoutes = function templateRoutes (req, res, next) {
+		res.locals.routes = config.routes;
+		next();
+	};
+
 	module.exports.csrf = function csrf (req, res, next) {
 		res.locals.token = req.csrfToken();
 		next();
@@ -19,7 +26,7 @@
 		if (req.session.isAuthenticated) {
 			next();
 		} else {
-			res.redirect('/login');
+			res.redirect(config.routes.login);
 		}
 	};
 
@@ -37,6 +44,16 @@
 	module.exports.logOut = function logOut (session) {
 		session.isAuthenticated = false;
 		delete session.user;
+	};
+
+	module.exports.cookieSecretKey = function cookieSecretKey () {
+		var text = '';
+    	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    	var i;
+    	for (i = 0; i < 64; i += 1) {
+        	text += possible.charAt(Math.floor(Math.random() * possible.length));
+        }
+        return text;
 	};
 
 }());
