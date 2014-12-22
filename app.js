@@ -2,13 +2,6 @@
 
 	"use strict";
 
-	var util = require('./middleware/utils');
-	var errorHandlers = require('./middleware/errorhandlers');
-	var log = require('./middleware/log');
-	var routes = require('./routes');
-	var config = require('./config');
-	
-	var express = require('express');
 	var partials = require('express-partials');
 	var cookieParser = require('cookie-parser');
 	var session = require('express-session');
@@ -17,7 +10,14 @@
 	var csrf = require('csurf');
 	var flash = require('connect-flash');
 
+	var express = require('express');
 	var app = express();
+
+	var util = require('./middleware/utils');
+	var errorHandlers = require('./middleware/errorhandlers');
+	var log = require('./middleware/log');
+	var routes = require('./routes');
+	var config = require('./config');
 
 	app.set('view options', {defaultLayout: 'layout'});
 	app.set('view engine', 'ejs');
