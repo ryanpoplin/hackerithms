@@ -1,5 +1,4 @@
 {
-  "_comment": "CHANGE THE LATEST SHIT TO SPECIFIC VERSIONS L8R...",
   "name": "hackerithms",
   "version": "1.0.0",
   "description": "...",
@@ -19,7 +18,10 @@
     "redis": "latest",
     "body-parser": "latest",
     "csurf": "latest",
-    
+    "socket.io": "latest",
+    "socket.io-redis": "latest",
+    "connect": "latest",
+    "cookie": "latest"
   },
   "repository": {
     "type": "git",

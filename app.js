@@ -5,8 +5,6 @@
 	"use strict";
 
 	// REQUIRE NEEDED MODULES INTO THE APPLICATION...	
-	
-	// ...
 	var partials = require('express-partials');
 	var cookieParser = require('cookie-parser');
 	var session = require('express-session');
@@ -65,9 +63,9 @@
 	app.post(config.routes.login, routes.loginProcess);
 	app.get(config.routes.logout, routes.logOut);
 	app.get('/chat', [util.requireAuthentication], routes.chat);
-	app.get('/error', function (req, res, next) {
+	/*app.get('/error', function (req, res, next) {
 		next(new Error('It\'s contrived...'));
-	});
+	});*/
 
 	// ERRORS...
 	app.use(errorHandlers.error);
