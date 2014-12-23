@@ -6,6 +6,7 @@
 
 	var config = {
 		port: 3000,
+		// config...
 		// secret: 'asdfjkl;',
 		redisUrl: 'redis://localhost',
 		routes: {
