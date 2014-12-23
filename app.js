@@ -1,8 +1,12 @@
+// CORE APPLICATION...
+
 (function () {
 
 	"use strict";
 
 	// REQUIRE NEEDED MODULES INTO THE APPLICATION...	
+	
+	// ...
 	var partials = require('express-partials');
 	var cookieParser = require('cookie-parser');
 	var session = require('express-session');
