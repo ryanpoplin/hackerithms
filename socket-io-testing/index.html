@@ -6,10 +6,25 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-	<!--<link rel="stylesheet" href="css/style.css">-->
+	<link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/chartist/dist/chartist.min.js"></script>
 	<script src="socket.io.js"></script>
 </head>
 <body>
+	<div class="ct-chart ct-perfect-fourth"></div>
+	<script>
+		// TESTING...
+		new Chartist.Line('.ct-chart', {
+  			labels: [1, 2, 3, 4, 5, 6, 7, 8],
+  			series: [
+    			[5, 9, 7, 8, 5, 3, 5, 4]
+  			]
+		}, {
+  			low: 0,
+  			showArea: true
+		});
+	</script>
 	<script>
 		var socket = io.connect('http://localhost:4000');
 		socket.on('ping', function (data) {
