@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Socket.io Ping Pong</title>
+	<title>socket.io</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<!-- Optional theme -->
@@ -12,25 +12,76 @@
 	<script src="socket.io.js"></script>
 </head>
 <body>
-	<div class="ct-chart ct-perfect-fourth"></div>
+	<div class="ct-chart"></div>
+	<div style="margin: 200px 0 0 100px">
+		<input type="text" id="username">
+		<button id="ping">...</button>
+	</div>
 	<script>
-		// TESTING...
-		new Chartist.Line('.ct-chart', {
-  			labels: [1, 2, 3, 4, 5, 6, 7, 8],
-  			series: [
-    			[5, 9, 7, 8, 5, 3, 5, 4]
-  			]
-		}, {
-  			low: 0,
-  			showArea: true
-		});
-	</script>
-	<script>
+
+		var labels = [], series = [], labelNums = 0;
+		
 		var socket = io.connect('http://localhost:4000');
-		socket.on('ping', function (data) {
-			console.log('ping');
-			socket.emit('pong');
+		
+		var $username = $('#username'),
+			$ping = $('#ping');
+		
+		function addData (message) {
+					
+			// if (message !== null && undefined && typeof String) {
+
+				labelNums += 1;
+				labels.push(labelNums);
+				series.push(message);
+
+				new Chartist.Line('.ct-chart', {
+  		
+  					labels: labels,
+  		
+  					series: [
+    	
+    					series
+  		
+  					]
+		
+				}, {
+  		
+  					low: 0,
+  		
+  					showArea: true
+		
+				});
+		
+			// }
+
+		};
+		
+		$username.on('change', function () {
+			
+			socket.emit('join', {
+				username: $username.val()
+			});
+		
 		});
+		
+		socket.on('userJoined', function (data) {
+				
+			addData(data.username);
+
+		});
+		
+		$ping.on('click', function () {
+		
+			socket.emit('ping');
+		
+		});
+		
+		socket.on('ping', function (data) {
+
+			addData(data.username);
+
+		});
+	
 	</script>
 	<!-- Latest compiled and minified JavaScript -->
 	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>-->
