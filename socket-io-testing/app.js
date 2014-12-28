@@ -10,10 +10,9 @@
 			socket.username = data.username;
 		});
 
-		socket.on('ping', function (data) {
-			io.sockets.emit('ping', {
-				username: socket.username
-			});
+		socket.on('ping', function(data, done){
+			socket.broadcast.emit('ping', {username: socket.username});
+			done('ack');
 		});
 
 	});

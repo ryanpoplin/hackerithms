@@ -15,20 +15,22 @@
 	<div class="ct-chart"></div>
 	<div style="margin: 200px 0 0 100px">
 		<input type="text" id="username">
-		<button id="ping">...</button>
+		<input type="button" id="ping" value="Graph">
+		<!--<div id="sent"></div>-->
 	</div>
 	<script>
 
-		var labels = [], series = [], labelNums = 0;
+		var labels = [], series = [], labelNums = 0, pingSent = 0;
 		
 		var socket = io.connect('http://localhost:4000');
 		
 		var $username = $('#username'),
-			$ping = $('#ping');
+			$ping = $('#ping'),
+			$sent = $('#sent');
 		
 		function addData (message) {
 					
-			// if (message !== null && undefined && typeof String) {
+			// if () {
 
 				labelNums += 1;
 				labels.push(labelNums);
@@ -72,7 +74,12 @@
 		
 		$ping.on('click', function () {
 		
-			socket.emit('ping');
+			socket.emit('ping', null, function (message) {
+				if (message === 'ack') {
+					pingSent += 1;
+					$sent.html('Socket connection accessed: ' + pingSent + ' times...');
+				}
+			});
 		
 		});
 		
