@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F4B563AB-EC35-4C81-A883-645074A76695</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iosHacker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>39301737F299E5F7152FBBAF24287B80C51D5026</key>
+		<string>https://github.com/ryanpoplin/hackerithms</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS8/iosHacker/iosHacker.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>39301737F299E5F7152FBBAF24287B80C51D5026</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ryanpoplin/hackerithms</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>39301737F299E5F7152FBBAF24287B80C51D5026</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>39301737F299E5F7152FBBAF24287B80C51D5026</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hackerithms</string>
+		</dict>
+	</array>
+</dict>
+</plist>
