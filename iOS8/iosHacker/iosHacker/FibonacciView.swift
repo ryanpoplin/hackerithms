@@ -16,7 +16,7 @@ class FibonacciView: UIView {
 
             var fiboSeq = Fibonacci()
             
-            var fiboSeqArr = fiboSeq.fibonacci(5)
+            var fiboSeqArr = fiboSeq.fibonacci(14)
             
             for x in fiboSeqArr {
 
@@ -24,11 +24,12 @@ class FibonacciView: UIView {
                 
                 let context = UIGraphicsGetCurrentContext()
                 
-                CGContextSetLineWidth(context, 5)
+                CGContextSetLineWidth(context, 1)
                 
-                CGContextMoveToPoint(context, 50, 10)
+                CGContextMoveToPoint(context, 350, 210)
                 
-                CGContextAddLineToPoint(context, CGFloat(x), 100)
+                CGContextAddLineToPoint(context, CGFloat(x), 200)
+                CGContextAddLineToPoint(context, 600, 300)
                 
                 CGContextStrokePath(context)
                 
