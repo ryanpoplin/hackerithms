@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AC07E6D1A598F4C00DD96A5 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC07E6C1A598F4C00DD96A5 /* Fibonacci.swift */; };
+		5AC07E6F1A59908400DD96A5 /* FibonacciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC07E6E1A59908400DD96A5 /* FibonacciView.swift */; };
 		5AE3F0941A5887F500AAEFBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3F0931A5887F500AAEFBB /* AppDelegate.swift */; };
 		5AE3F0971A5887F500AAEFBB /* iosHacker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3F0951A5887F500AAEFBB /* iosHacker.xcdatamodeld */; };
 		5AE3F0991A5887F500AAEFBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3F0981A5887F500AAEFBB /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5AC07E6C1A598F4C00DD96A5 /* Fibonacci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Fibonacci.swift; path = ../Fibonacci.swift; sourceTree = "<group>"; };
+		5AC07E6E1A59908400DD96A5 /* FibonacciView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciView.swift; sourceTree = "<group>"; };
 		5AE3F08E1A5887F500AAEFBB /* iosHacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosHacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE3F0921A5887F500AAEFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AE3F0931A5887F500AAEFBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,7 @@
 		5AE3F0A61A5887F500AAEFBB /* iosHackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosHackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE3F0AB1A5887F600AAEFBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AE3F0AC1A5887F600AAEFBB /* iosHackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosHackerTests.swift; sourceTree = "<group>"; };
+		5AE3F0B61A588F9C00AAEFBB /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 		5AE3F0851A5887F500AAEFBB = {
 			isa = PBXGroup;
 			children = (
+				5AE3F0B61A588F9C00AAEFBB /* MyPlayground.playground */,
 				5AE3F0901A5887F500AAEFBB /* iosHacker */,
 				5AE3F0A91A5887F600AAEFBB /* iosHackerTests */,
 				5AE3F08F1A5887F500AAEFBB /* Products */,
@@ -81,6 +87,8 @@
 			children = (
 				5AE3F0931A5887F500AAEFBB /* AppDelegate.swift */,
 				5AE3F0981A5887F500AAEFBB /* ViewController.swift */,
+				5AC07E6E1A59908400DD96A5 /* FibonacciView.swift */,
+				5AC07E6C1A598F4C00DD96A5 /* Fibonacci.swift */,
 				5AE3F09A1A5887F500AAEFBB /* Main.storyboard */,
 				5AE3F09D1A5887F500AAEFBB /* Images.xcassets */,
 				5AE3F09F1A5887F500AAEFBB /* LaunchScreen.xib */,
@@ -215,9 +223,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC07E6D1A598F4C00DD96A5 /* Fibonacci.swift in Sources */,
 				5AE3F0991A5887F500AAEFBB /* ViewController.swift in Sources */,
 				5AE3F0941A5887F500AAEFBB /* AppDelegate.swift in Sources */,
 				5AE3F0971A5887F500AAEFBB /* iosHacker.xcdatamodeld in Sources */,
+				5AC07E6F1A59908400DD96A5 /* FibonacciView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +421,7 @@
 				5AE3F0B21A5887F600AAEFBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AE3F0B31A5887F600AAEFBB /* Build configuration list for PBXNativeTarget "iosHackerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +430,7 @@
 				5AE3F0B51A5887F600AAEFBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
