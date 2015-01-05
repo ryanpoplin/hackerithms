@@ -25,6 +25,8 @@ class Fibonacci {
         fibonacciArr.removeAtIndex(0)
         fibonacciArr.removeAtIndex(1)
         
+        println(fibonacciArr)
+        
         for x in fibonacciArr {
             println(x)
         }

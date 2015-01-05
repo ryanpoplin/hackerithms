@@ -12,23 +12,31 @@ class FibonacciView: UIView {
 
     override func drawRect(rect: CGRect) {
         
-        var fiboSeq = Fibonacci()
-            
+        let fiboSeq = Fibonacci()
         var fiboSeqArr = fiboSeq.fibonacci(14)
+        var fiboSeqArrReverse = fiboSeqArr.reverse()
+        
+        for var j = 0; j < fiboSeqArrReverse.count; j += 1 {
+
+            fiboSeqArr.append(-fiboSeqArrReverse[j])
             
+        }
+        
+        println(fiboSeqArr)
+        
         for x in fiboSeqArr {
 
             UIColor.blueColor().set()
                 
             let context = UIGraphicsGetCurrentContext()
-                
+            
             CGContextSetLineWidth(context, 1)
                 
-            CGContextMoveToPoint(context, 350, 210)
+            CGContextMoveToPoint(context, 550, 350)
                 
-            CGContextAddLineToPoint(context, CGFloat(x), 200)
-            CGContextAddLineToPoint(context, 600, 300)
-                
+            CGContextAddLineToPoint(context, CGFloat(x), 300)
+            CGContextAddLineToPoint(context, CGFloat(-x), -500)
+            
             CGContextStrokePath(context)
                 
         }

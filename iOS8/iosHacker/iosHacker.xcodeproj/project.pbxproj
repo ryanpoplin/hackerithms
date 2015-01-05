@@ -63,6 +63,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A95315D1A59C73500FB488F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AE3F0981A5887F500AAEFBB /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5A95315E1A59C74400FB488F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AC07E6E1A59908400DD96A5 /* FibonacciView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5A95315F1A59C75200FB488F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5AC07E6C1A598F4C00DD96A5 /* Fibonacci.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		5AE3F0851A5887F500AAEFBB = {
 			isa = PBXGroup;
 			children = (
@@ -86,9 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				5AE3F0931A5887F500AAEFBB /* AppDelegate.swift */,
-				5AE3F0981A5887F500AAEFBB /* ViewController.swift */,
-				5AC07E6E1A59908400DD96A5 /* FibonacciView.swift */,
-				5AC07E6C1A598F4C00DD96A5 /* Fibonacci.swift */,
+				5A95315D1A59C73500FB488F /* Controllers */,
+				5A95315E1A59C74400FB488F /* Views */,
+				5A95315F1A59C75200FB488F /* Models */,
 				5AE3F09A1A5887F500AAEFBB /* Main.storyboard */,
 				5AE3F09D1A5887F500AAEFBB /* Images.xcassets */,
 				5AE3F09F1A5887F500AAEFBB /* LaunchScreen.xib */,
