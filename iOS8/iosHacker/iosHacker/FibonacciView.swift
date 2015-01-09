@@ -31,7 +31,7 @@ class FibonacciView: UIView {
                 
             let context = UIGraphicsGetCurrentContext()
             
-            CGContextSetLineWidth(context, 0.5  )
+            CGContextSetLineWidth(context, 0.5)
             
             CGContextMoveToPoint(context, 700, 400)
                 

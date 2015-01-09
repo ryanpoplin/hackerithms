@@ -27,7 +27,9 @@ class Fibonacci {
         println(fibonacciArr)
         
         for x in fibonacciArr {
+            
             println(x)
+        
         }
         
         return fibonacciArr
