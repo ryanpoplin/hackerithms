@@ -12,9 +12,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let ccpTestaa = testaa()
-        
     }
 
     override func didReceiveMemoryWarning() {

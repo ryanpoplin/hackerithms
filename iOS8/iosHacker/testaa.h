@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 ByrdannFox, Inc. All rights reserved.
 //
 
-#ifndef __iosHacker__testaa__
+/*#ifndef __iosHacker__testaa__
 #define __iosHacker__testaa__
 
 #include <stdio.h>
 
-#endif /* defined(__iosHacker__testaa__) */
+#endif*/ /* defined(__iosHacker__testaa__) */
 

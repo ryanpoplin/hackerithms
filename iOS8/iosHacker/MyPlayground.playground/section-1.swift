@@ -5,20 +5,23 @@ import UIKit
 // 4a = ((a + a) + a) + a = (a + a) + (a + a)
 // a + (b + c) = (a + b) + c
 
-func multi(n: Int, a: Int) {
-        
-    var multiValue = n * a
-        
-    println(multiValue)
-    
-}
-
-multi(1, 32)
+//func multi(n: Int, a: Int) {
+//        
+//    var multiValue = n * a
+//        
+//    println(multiValue)
+//    
+//}
+//
+//multi(1, 32)
 
 // even...
 // n = n / 2 + n / 2
+// even()...
+
 // odd...
 // n = n - 1 / 2 + n - 1 / 2 + 1
+// odd()...
 
 // extra mathematical notations:
 
@@ -107,3 +110,28 @@ multi(1, 32)
 // set of complex numbers...
 // a + bx
 
+// Swift array testing...
+
+var todoList:[String] = ["Master array algorithms with Swift...", "Prepare for iOS meeting..."]
+
+if todoList.isEmpty {
+    println("No elements in the array...")
+} else {
+    println("Array has \(todoList.count) elements...")
+}
+
+todoList.append("push it...")
+
+todoList[2] = "push it real good..."
+
+todoList.insert("...", atIndex: 2)
+
+todoList.removeLast()
+
+for x in todoList {
+    println(x)
+}
+
+// [0...2] usefulness?
+
+var testArr = [Int]()

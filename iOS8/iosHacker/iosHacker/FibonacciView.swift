@@ -14,7 +14,7 @@ class FibonacciView: UIView {
         
         let fiboSeq = Fibonacci()
         
-        var fiboSeqArr = fiboSeq.fibonacci(14)
+        var fiboSeqArr = fiboSeq.fibonacci(16)
         var fiboSeqArrReverse = fiboSeqArr.reverse()
         
         for var j = 0; j < fiboSeqArrReverse.count; j += 1 {
@@ -24,7 +24,7 @@ class FibonacciView: UIView {
         }
         
         println(fiboSeqArr)
-        
+                
         for x in fiboSeqArr {
 
             UIColor.blueColor().set()

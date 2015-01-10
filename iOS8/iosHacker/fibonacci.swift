@@ -12,24 +12,14 @@ class Fibonacci {
     
     func fibonacci(arg:Int) -> Array<Int> {
         
-        var fibonacciArr = [0, 1, 1]
+        var fibonacciArr:[Int] = [0, 1, 1]
         
-        for var i = 3; i < 2 + arg; i += 1 {
+        for var i = 3; i < arg; i += 1 {
             
-            var fiboArithmetic = fibonacciArr[i - 1] + fibonacciArr[i - 2]
+            var fiboArithmetic = fibonacciArr[i - 2] + fibonacciArr[i - 1]
             
             fibonacciArr.insert(fiboArithmetic, atIndex: i)
             
-        }
-        
-        fibonacciArr.removeAtIndex(0)
-        
-        println(fibonacciArr)
-        
-        for x in fibonacciArr {
-            
-            println(x)
-        
         }
         
         return fibonacciArr
