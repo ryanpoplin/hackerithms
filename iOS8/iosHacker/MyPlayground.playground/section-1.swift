@@ -110,28 +110,3 @@ import UIKit
 // set of complex numbers...
 // a + bx
 
-// Swift array testing...
-
-var todoList:[String] = ["Master array algorithms with Swift...", "Prepare for iOS meeting..."]
-
-if todoList.isEmpty {
-    println("No elements in the array...")
-} else {
-    println("Array has \(todoList.count) elements...")
-}
-
-todoList.append("push it...")
-
-todoList[2] = "push it real good..."
-
-todoList.insert("...", atIndex: 2)
-
-todoList.removeLast()
-
-for x in todoList {
-    println(x)
-}
-
-// [0...2] usefulness?
-
-var testArr = [Int]()

@@ -12,6 +12,12 @@ class FibonacciView: UIView {
 
     override func drawRect(rect: CGRect) {
         
+        // ...
+        let arrayTest = ArrayTest()
+        
+        arrayTest.arrayShifter()
+        
+        // ...
         let fiboSeq = Fibonacci()
         
         var fiboSeqArr = fiboSeq.fibonacci(16)

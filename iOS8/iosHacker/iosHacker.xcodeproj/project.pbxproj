@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A4C5E8E1A617F6F00F86444 /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4C5E8D1A617F6F00F86444 /* ArrayTest.swift */; };
 		5A9531651A5F60C000FB488F /* testaa.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A9531631A5F60C000FB488F /* testaa.cpp */; };
 		5AC07E6D1A598F4C00DD96A5 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC07E6C1A598F4C00DD96A5 /* Fibonacci.swift */; };
 		5AC07E6F1A59908400DD96A5 /* FibonacciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC07E6E1A59908400DD96A5 /* FibonacciView.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A4C5E8D1A617F6F00F86444 /* ArrayTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTest.swift; sourceTree = "<group>"; };
 		5A9531621A5F60BF00FB488F /* iosHacker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosHacker-Bridging-Header.h"; sourceTree = "<group>"; };
 		5A9531631A5F60C000FB488F /* testaa.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testaa.cpp; sourceTree = "<group>"; };
 		5A9531641A5F60C000FB488F /* testaa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testaa.h; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				5AC07E6C1A598F4C00DD96A5 /* Fibonacci.swift */,
+				5A4C5E8D1A617F6F00F86444 /* ArrayTest.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				5AC07E6D1A598F4C00DD96A5 /* Fibonacci.swift in Sources */,
 				5AE3F0991A5887F500AAEFBB /* ViewController.swift in Sources */,
+				5A4C5E8E1A617F6F00F86444 /* ArrayTest.swift in Sources */,
 				5AE3F0941A5887F500AAEFBB /* AppDelegate.swift in Sources */,
 				5AE3F0971A5887F500AAEFBB /* iosHacker.xcdatamodeld in Sources */,
 				5AC07E6F1A59908400DD96A5 /* FibonacciView.swift in Sources */,
