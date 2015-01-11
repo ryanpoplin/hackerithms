@@ -18,8 +18,11 @@ class FibonacciView: UIView {
         var testArr = [0, 1, 2, 3, 4, 5]
         
         arrayTest.arrayBeginShifter(testArr, loopInitArg: 1, incOrDec: 1, boolTest: true)
+        
         arrayTest.arrayFirstLastShifter(testArr)
+        
         arrayTest.arrayRemoveSplice(testArr)
+        
         arrayTest.arrayAlterSplice(testArr)
         
         // ...
