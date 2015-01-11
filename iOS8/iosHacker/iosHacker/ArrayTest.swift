@@ -26,4 +26,40 @@ class ArrayTest {
         
     }
     
+    func arrayAddRemoveShifter() -> Array<Int> {
+        
+        var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        
+        for var i = 3; i < numbers.count; i += 1 {
+            
+            numbers.removeAtIndex(0)
+            
+            numbers.removeLast()
+            
+        }
+        
+        println(numbers)
+        
+        return numbers
+        
+    }
+    
+    func arraySplice() -> Array<Int> {
+        
+        var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        
+        for var i = 0, j = 1, k = 0; i < 3; i += 1, j += 1 {
+        
+            numbers.removeAtIndex(j - i)
+            
+            // numbers.insert(k, atIndex: j)
+            
+        }
+        
+        println(numbers)
+        
+        return numbers
+        
+    }
+    
 }
