@@ -10,14 +10,35 @@ import Foundation
 
 class ArrayTest {
     
-    func arrayShifter() -> Array<Int> {
-
-        var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    func arrayBeginShifter(numbersArr: [Int], loopInitArg: Int, incOrDec: Int, boolTest: Bool) -> Array<Int> {
         
-        for var i = numbers.count - 1, j = 1; i > 0; i -= 1, j += 1 {
+        var numbers = numbersArr
+        
+        for var i = numbers.count - 1, j = loopInitArg, k = 0; i >= 0; i -= 1 {
             
-            numbers.insert(-j, atIndex: 0)
-        
+            numbers.insert(j, atIndex: k)
+            
+            let incrementOrDecrement = incOrDec
+            
+            switch incrementOrDecrement {
+                
+            case 1:
+                j++
+                
+            case 2:
+                j--
+                
+            default:
+                println("...")
+                
+            }
+            
+            if boolTest {
+                
+                k += 1
+                
+            }
+            
         }
         
         println(numbers)
@@ -26,9 +47,9 @@ class ArrayTest {
         
     }
     
-    func arrayAddRemoveShifter() -> Array<Int> {
+    func arrayAddRemoveShifter(numbersArr: [Int]) -> Array<Int> {
         
-        var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        var numbers = numbersArr
         
         for var i = 3; i < numbers.count; i += 1 {
             
@@ -44,17 +65,13 @@ class ArrayTest {
         
     }
     
-    func arraySplice() -> Array<Int> {
+    func arraySplice(numbersArr: [Int]) -> Array<Int> {
         
-        var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        var numbers = numbersArr
         
-        for var i = 0, j = 1, k = 2; i < 3; i += 1, j += 1, k += 2 {
+        for var i = 0, j = 1, k = 2, l = 0; i < 3; i += 1, j += 1, k += 2 {
         
             numbers.removeAtIndex(j - i)
-            
-            println(j)
-            
-            numbers.insert(k, atIndex: j)
             
         }
         
@@ -64,4 +81,19 @@ class ArrayTest {
         
     }
     
+    func arrayAlterSplice(numbersArr: [Int]) -> Array<Int> {
+        
+        var numbers = numbersArr
+        
+        numbers[1...3] = [3, 2, 1]
+        
+        println(numbers)
+        
+        return numbers
+        
+    }
+    
 }
+
+// ...
+

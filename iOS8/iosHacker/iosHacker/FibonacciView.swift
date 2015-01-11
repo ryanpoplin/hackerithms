@@ -15,9 +15,12 @@ class FibonacciView: UIView {
         // ...
         let arrayTest = ArrayTest()
         
-        arrayTest.arrayShifter()
-        arrayTest.arrayAddRemoveShifter()
-        arrayTest.arraySplice()
+        var testArr = [0, 1, 2, 3, 4, 5]
+        
+        arrayTest.arrayBeginShifter(testArr, loopInitArg: 0, incOrDec: 2, boolTest: false)
+//        arrayTest.arrayAddRemoveShifter(testArr)
+//        arrayTest.arraySplice(testArr)
+//        arrayTest.arrayAlterSplice(testArr)
         
         // ...
         let fiboSeq = Fibonacci()
