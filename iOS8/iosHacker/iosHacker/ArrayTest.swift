@@ -47,11 +47,11 @@ class ArrayTest {
         
     }
     
-    func arrayAddRemoveShifter(numbersArr: [Int]) -> Array<Int> {
+    func arrayFirstLastShifter(numbersArr: [Int]) -> Array<Int> {
         
         var numbers = numbersArr
         
-        for var i = 3; i < numbers.count; i += 1 {
+        for var i = 1; i < numbers.count; i += 1 {
             
             numbers.removeAtIndex(0)
             
@@ -65,11 +65,11 @@ class ArrayTest {
         
     }
     
-    func arraySplice(numbersArr: [Int]) -> Array<Int> {
+    func arrayRemoveSplice(numbersArr: [Int]) -> Array<Int> {
         
         var numbers = numbersArr
         
-        for var i = 0, j = 1, k = 2, l = 0; i < 3; i += 1, j += 1, k += 2 {
+        for var i = 0, j = 1; i < 3; i += 1, j += 1 {
         
             numbers.removeAtIndex(j - i)
             
@@ -85,6 +85,7 @@ class ArrayTest {
         
         var numbers = numbersArr
         
+        // ...
         numbers[1...3] = [3, 2, 1]
         
         println(numbers)
