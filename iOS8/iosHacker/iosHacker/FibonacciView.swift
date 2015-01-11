@@ -23,6 +23,9 @@ class FibonacciView: UIView {
         arrayTest.arrayAlterSplice(testArr)
         
         // ...
+        var averageTemp = [[72, 75, 79, 79, 81, 81], [81, 79, 75, 75, 73, 72]]
+        
+        // ...
         let fiboSeq = Fibonacci()
         
         var fiboSeqArr = fiboSeq.fibonacci(16)
