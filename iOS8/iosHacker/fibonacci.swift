@@ -12,7 +12,7 @@ class Fibonacci {
     
     func fibonacci(arg:Int) -> Array<Int> {
         
-        var fibonacciArr:[Int] = [0, 1, 1]
+        var fibonacciArr = [0, 1, 1]
         
         for var i = 3; i < arg; i += 1 {
             

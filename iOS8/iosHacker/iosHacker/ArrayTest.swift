@@ -48,11 +48,13 @@ class ArrayTest {
         
         var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         
-        for var i = 0, j = 1, k = 0; i < 3; i += 1, j += 1 {
+        for var i = 0, j = 1, k = 2; i < 3; i += 1, j += 1, k += 2 {
         
             numbers.removeAtIndex(j - i)
             
-            // numbers.insert(k, atIndex: j)
+            println(j)
+            
+            numbers.insert(k, atIndex: j)
             
         }
         
