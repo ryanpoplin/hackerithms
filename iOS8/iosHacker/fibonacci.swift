@@ -8,6 +8,8 @@
 
 import Foundation
 
+/* HOW MOVE POINTS AWAY FROM THE LEFT...? */
+
 // model object...
 class Fibonacci {
     
