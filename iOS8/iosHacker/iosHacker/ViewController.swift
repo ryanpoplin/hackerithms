@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // hide the top bar stuff...
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

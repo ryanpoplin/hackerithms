@@ -10,6 +10,8 @@ import Foundation
 
 class ArrayTest {
     
+    // document the methods for meetup...
+    
     func arrayBeginShifter(numbersArr: [Int], loopInitArg: Int, incOrDec: Int, boolTest: Bool) -> Array<Int> {
         
         var numbers = numbersArr
@@ -85,7 +87,6 @@ class ArrayTest {
         
         var numbers = numbersArr
         
-        // ...
         numbers[1...3] = [3, 2, 1]
         
         println(numbers)
@@ -94,8 +95,4 @@ class ArrayTest {
         
     }
     
-    
-    
 }
-
-// ...

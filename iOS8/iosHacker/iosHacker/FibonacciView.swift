@@ -12,37 +12,22 @@ class FibonacciView: UIView {
 
     override func drawRect(rect: CGRect) {
         
-        // ...
-        let arrayTest = ArrayTest()
+        // since there's no need for mutation, optimize with a constant for instantiation...
+        let fibonacci = Fibonacci()
         
-        var testArr = [0, 1, 2, 3, 4, 5]
-        
-        arrayTest.arrayBeginShifter(testArr, loopInitArg: 1, incOrDec: 1, boolTest: true)
-        
-        arrayTest.arrayFirstLastShifter(testArr)
-        
-        arrayTest.arrayRemoveSplice(testArr)
-        
-        arrayTest.arrayAlterSplice(testArr)
-        
-        // ...
-        var averageTemp = [[72, 75, 79, 79, 81, 81], [81, 79, 75, 75, 73, 72]]
-        
-        // ...
-        let fiboSeq = Fibonacci()
-        
-        var fiboSeqArr = fiboSeq.fibonacci(16)
+        // pass '16' as our argument to the fibonacci class' fibonacci method...
+        var fiboSeqArr = fibonacci.fibonacciSequence(16)
+        // reverse the elements of the array for opposite drawing values...
         var fiboSeqArrReverse = fiboSeqArr.reverse()
         
-        for var j = 0; j < fiboSeqArrReverse.count; j += 1 {
-
-            fiboSeqArr.append(-fiboSeqArrReverse[j])
-            
-        }
+        // refer to the Fibonacci Class...
+        var fiboDrawArr = fibonacci.fibonacciSequenceReversed(fiboSeqArrReverse.count, reversedArr: fiboSeqArrReverse, fiboArr: fiboSeqArr)
         
-        println(fiboSeqArr)
-                
-        for x in fiboSeqArr {
+        // log the contents of the array...
+        println(fiboDrawArr)
+        
+        // for every element in the fiboDrawArr array, execute the following statements...
+        for x in fiboDrawArr {
 
             UIColor.blueColor().set()
                 
