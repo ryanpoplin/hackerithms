@@ -48,7 +48,9 @@ class FibonacciView: UIView {
             
             // start the point paths here...
             // 700, 400...
-            CGContextMoveToPoint(context, 700, 400)
+            // CGContextMoveToPoint(context, 500, 200)
+            // CGContextMoveToPoint(context, 700, 400)
+            CGContextMoveToPoint(context, 200, 200)
             
             // end the point paths here...
             // 300...
@@ -57,12 +59,12 @@ class FibonacciView: UIView {
             CGContextAddLineToPoint(context, CGFloat(-x), -300)
             
             // our lines color for Core Graphics to fill in...
-            UIColor.blueColor().set()
+            UIColor.purpleColor().set()
             
             // draw the line...
             CGContextStrokePath(context)
                 
-        }
+        }   
         
     }
 
