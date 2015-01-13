@@ -14,6 +14,7 @@ import Foundation
 class Fibonacci {
     
     // the fibonacci method takes one integer argument, and returns an array of integers...
+    // how long do we want our sequence to be?
     func fibonacciSequence(arg:Int) -> Array<Int> {
         
         // create an array literal that contains the first three 'modern usage' integers of the...
@@ -23,7 +24,6 @@ class Fibonacci {
         
         // starting at the fibonacciArr array's third element reference...
         // (we don't care about adding the first element because it's zero...
-        // i < arg && i += 1 == "refer below..."
         for var i = 3; i < arg; i += 1 {
             
             // we start by taking the reference return values of the second and third elements...
@@ -59,7 +59,7 @@ class Fibonacci {
             
             // take the contents of the reversed fibonacci sequence array, negate it, and...
             // append it to the end of the fibonacciArr array...
-            fibonacciArr.append(-reversedArr[i])
+            // fibonacciArr.append(-reversedArr[i])
             
         }
         
