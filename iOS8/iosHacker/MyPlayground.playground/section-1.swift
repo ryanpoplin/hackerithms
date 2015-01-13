@@ -110,6 +110,8 @@ import UIKit
 // set of complex numbers...
 // a + bx
 
+/* PROOF OF CONCEPTS... */
+
 // ...
 class ArrayTest {
     
@@ -117,109 +119,138 @@ class ArrayTest {
     // to the beginning of an array, and controlling certain factors...
     
     // arrayBeginShifter method can take an array of integers...
-    // an initial loop counter, an increment or decrement value, and a boolean...
+    // an initial loop counter, an increment or decrement case value...
+    // an increment or decrement value, and a boolean value...
     // it returns an array of integers...
-    func arrayBeginShifter(numbersArr: [Int], loopInitArg: Int, incOrDec: Int, boolTest: Bool) -> Array<Int> {
+    func arrayBeginShifter(numbersArr: [Int], loopInitArg: Int, incOrDec: Int, incOrDecVal: Int, boolTest: Bool) -> Array<Int> {
     
         // make the array literal mutable...
         var numbers = numbersArr
         
-        //
-        for var i = numbers.count - 1, j = loopInitArg, k = 0; i >= 0; i -= 1 {
+        // execute the statements in the loop as many times as there are...
+        // elements in the array...
+        // j is our element initial element value...
+        // k is our indexing element value...
+        // i > 0 == just counting down executions from the array...
+        // i is decremented until i > 0...
+        for var i = numbers.count, j = loopInitArg, k = 0; i > 0; i -= 1 {
             
-            //
+            // insert our array element value at a particular index...
             numbers.insert(j, atIndex: k)
             
-            //
-            let incrementOrDecrement = incOrDec
+            // based on the incOrDec value...
+            switch incOrDec {
             
-            //
-            switch incrementOrDecrement {
-            
-            //
+            // run if incOrDec is 1...
             case 1:
-                j++
+                j += incOrDecVal
                 
-            //
+            // run if incOrDec is 2...
             case 2:
-                j--
+                j -= incOrDecVal
                
-            //
+            // just required stuff for switch statements...
             default:
                 println("...")
                 
             }
             
-            //
+            // if true, we'll add our elements in the standard order...
+            // if false, we'll add our elements in a reversed order...
             if boolTest {
                 
+                // ...
                 k += 1
                 
             }
             
         }
         
-        //
+        // return our array...
         return numbers
         
     }
     
+    // the arrayFirstLastShifter method should remove the same amount of elements...
+    // from the beginning and end of our array...
+    
+    // we take in an array of integers, and return an array of integers...
     func arrayFirstLastShifter(numbersArr: [Int]) -> Array<Int> {
         
+        // make our array literal mutable...
         var numbers = numbersArr
         
-        for var i = 1; i < numbers.count; i += 1 {
-            
+        // will only execute twice since the we are...
+        // shaving off the elements from the end of...
+        // the array...
+        for var i = 0; i < numbers.count; i += 1 {
+          
+            // remove elements at the beginning of the array...
             numbers.removeAtIndex(0)
             
+            // remove elements at the end of the array...
             numbers.removeLast()
             
         }
         
-        println(numbers)
-        
+        // return the array...
         return numbers
         
     }
     
+    // the arrayRemoveSplice method should remove a range of elements from our array...
+    // this method takes an array of integers and returns an array of integers...
     func arrayRemoveSplice(numbersArr: [Int]) -> Array<Int> {
         
+        // make our array mutable...
         var numbers = numbersArr
         
-        for var i = 0, j = 1; i < 3; i += 1, j += 1 {
+        // remove three elements from our array...
+        // start at the second element...
+        for var i = 0; i < 3; i += 1 {
             
-            numbers.removeAtIndex(j - i)
+            // we choose an index to remove elements from...
+            // since we're shaving elements off, [1] will remove...
+            // 1, 2, 3; just like we wanted...
+            numbers.removeAtIndex(1)
             
         }
         
-        println(numbers)
-        
+        // return our array...
         return numbers
         
     }
     
+    // this method should alter a range of elements in an array...
+    // arrayAlterSplice method takes an array of integers and...
+    // returns an array of integers...
     func arrayAlterSplice(numbersArr: [Int]) -> Array<Int> {
         
+        // make our array literal mutable...
         var numbers = numbersArr
         
+        // from elements 1 to 3, replace the values with another array...
+        // of elements...
         numbers[1...3] = [3, 2, 1]
         
-        println(numbers)
-        
+        // return our array...
         return numbers
         
     }
     
 }
 
+// create an instance of our class...
 let arrayTest = ArrayTest()
 
+// our test array...
 var testArr = [0, 1, 2, 3, 4, 5]
 
-arrayTest.arrayBeginShifter(testArr, loopInitArg: 1, incOrDec: 1, boolTest: true)
+// invoke our class instance methods...
+arrayTest.arrayBeginShifter(testArr, loopInitArg: 0, incOrDec: 2, incOrDecVal: 6, boolTest: true)
 
-//arrayTest.arrayFirstLastShifter(testArr)
-//
-//arrayTest.arrayRemoveSplice(testArr)
-//
-//arrayTest.arrayAlterSplice(testArr)
+arrayTest.arrayFirstLastShifter(testArr)
+
+arrayTest.arrayRemoveSplice(testArr)
+
+arrayTest.arrayAlterSplice(testArr)
