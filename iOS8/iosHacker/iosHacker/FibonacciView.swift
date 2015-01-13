@@ -8,8 +8,12 @@
 
 import UIKit
 
+/* THE STORYBOARD CLASS REFERENCE...? */
+
+// view object...
 class FibonacciView: UIView {
 
+    // ...
     override func drawRect(rect: CGRect) {
         
         // since there's no need for mutation, optimize with a constant for instantiation...
@@ -29,17 +33,24 @@ class FibonacciView: UIView {
         // for every element in the fiboDrawArr array, execute the following statements...
         for x in fiboDrawArr {
 
+            //
             UIColor.blueColor().set()
-                
+            
+            //
             let context = UIGraphicsGetCurrentContext()
             
+            //
             CGContextSetLineWidth(context, 0.5)
             
+            //
             CGContextMoveToPoint(context, 700, 400)
-                
+            
+            //
             CGContextAddLineToPoint(context, CGFloat(x), 300)
+            //
             CGContextAddLineToPoint(context, CGFloat(-x), -300)
             
+            //
             CGContextStrokePath(context)
                 
         }

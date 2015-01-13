@@ -110,6 +110,7 @@ import UIKit
 // set of complex numbers...
 // a + bx
 
+// ...
 class ArrayTest {
     
     func arrayBeginShifter(numbersArr: [Int], loopInitArg: Int, incOrDec: Int, boolTest: Bool) -> Array<Int> {
