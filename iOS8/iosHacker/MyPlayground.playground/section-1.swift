@@ -113,29 +113,44 @@ import UIKit
 // ...
 class ArrayTest {
     
+    // an array algorithm for adding certain elements...
+    // to the beginning of an array, and controlling certain factors...
+    
+    // arrayBeginShifter method can take an array of integers...
+    // an initial loop counter, an increment or decrement value, and a boolean...
+    // it returns an array of integers...
     func arrayBeginShifter(numbersArr: [Int], loopInitArg: Int, incOrDec: Int, boolTest: Bool) -> Array<Int> {
-        
+    
+        // make the array literal mutable...
         var numbers = numbersArr
         
+        //
         for var i = numbers.count - 1, j = loopInitArg, k = 0; i >= 0; i -= 1 {
             
+            //
             numbers.insert(j, atIndex: k)
             
+            //
             let incrementOrDecrement = incOrDec
             
+            //
             switch incrementOrDecrement {
-                
+            
+            //
             case 1:
                 j++
                 
+            //
             case 2:
                 j--
-                
+               
+            //
             default:
                 println("...")
                 
             }
             
+            //
             if boolTest {
                 
                 k += 1
@@ -144,8 +159,7 @@ class ArrayTest {
             
         }
         
-        println(numbers)
-        
+        //
         return numbers
         
     }
