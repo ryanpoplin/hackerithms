@@ -247,7 +247,7 @@ let arrayTest = ArrayTest()
 var testArr = [0, 1, 2, 3, 4, 5]
 
 // invoke our class instance methods...
-arrayTest.arrayBeginShifter(testArr, loopInitArg: 0, incOrDec: 2, incOrDecVal: 6, boolTest: true)
+arrayTest.arrayBeginShifter(testArr, loopInitArg: 0, incOrDec: 2, incOrDecVal: 6, boolTest: false)
 
 arrayTest.arrayFirstLastShifter(testArr)
 
