@@ -1,6 +1,6 @@
 (function () {
 
-	"use strict"
+	"use strict";
 
 	// don't use different data types in an array in JS, even though you can...
 
@@ -16,16 +16,24 @@
 	
 	}
 
-	// var fibo = function () {
-	// 	var fibonacci = [0, 1, 1], i;
-	// 	for (i = 3; i < 6; i += 1) {
-	// 		fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];	
-	// 		console.log(fibonacci[i]);
-	// 	}
-	// };
+	// the Fibonacci sequence...
 
-	// fibo();
+	var fibonacciSequence = function (sequenceLength) {
 
+		var fibonacciArr = [0, 1, 1];
 
+		for (var i = 3; i < sequenceLength; i += 1) {
+
+			fibonacciArr[i] = fibonacciArr[i - 2] + fibonacciArr[i - 1];
+
+		}
+
+		console.log(fibonacciArr);
+
+	};
+
+	fibonacciSequence(24);
+
+	// ...
 
 }());
